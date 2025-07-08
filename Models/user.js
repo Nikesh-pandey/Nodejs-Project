@@ -6,7 +6,7 @@ const UserSchema=new mongoose.Schema({
     },
     age:{
         type:Number,
-        required:true,
+        required:tru
     },
     email:{
         type:String,
@@ -20,6 +20,10 @@ const UserSchema=new mongoose.Schema({
         required:true,
         enum:['male','Female','Other'],
         message:'Gender must be male female or Other'
+    },
+    position:{
+        type:String,
+        required:true,
     },
 });
 console.log("Data is", UserSchema);
